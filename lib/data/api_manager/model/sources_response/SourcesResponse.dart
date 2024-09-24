@@ -1,4 +1,4 @@
-import 'Sources.dart';
+import 'package:news_app_c11_thursday/data/api_manager/model/sources_response/Sources.dart';
 
 class SourcesResponse {
   SourcesResponse({
@@ -15,7 +15,7 @@ class SourcesResponse {
     if (json['sources'] != null) {
       sources = [];
       json['sources'].forEach((v) {
-        sources?.add(Sources.fromJson(v));
+        sources?.add(Source.fromJson(v));
       });
     }
   }
@@ -23,11 +23,11 @@ class SourcesResponse {
   String? status;
   String? code;
   String? message;
-  List<Sources>? sources;
+  List<Source>? sources;
 
   SourcesResponse copyWith({
     String? status,
-    List<Sources>? sources,
+    List<Source>? sources,
   }) =>
       SourcesResponse(
         status: status ?? this.status,

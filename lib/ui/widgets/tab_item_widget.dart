@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:news_app_c11_thursday/api_manager/model/Sources.dart';
+import 'package:news_app_c11_thursday/data/api_manager/model/sources_response/Sources.dart';
 
 class TabItemWidget extends StatelessWidget {
   bool isSelected;
-  Sources source;
+  Source source;
 
   TabItemWidget({required this.source, required this.isSelected});
 
