@@ -1,5 +1,5 @@
-class Sources {
-  Sources({
+class Source {
+  Source({
     this.id,
     this.name,
     this.description,
@@ -9,7 +9,7 @@ class Sources {
     this.country,
   });
 
-  Sources.fromJson(dynamic json) {
+  Source.fromJson(dynamic json) {
     id = json['id'];
     name = json['name'];
     description = json['description'];
@@ -27,7 +27,7 @@ class Sources {
   String? language;
   String? country;
 
-  Sources copyWith({
+  Source copyWith({
     String? id,
     String? name,
     String? description,
@@ -36,7 +36,7 @@ class Sources {
     String? language,
     String? country,
   }) =>
-      Sources(
+      Source(
         id: id ?? this.id,
         name: name ?? this.name,
         description: description ?? this.description,
